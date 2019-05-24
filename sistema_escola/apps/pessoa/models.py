@@ -1,10 +1,20 @@
 from django.db import models
+'''
 
-class Pessoa(models.Model0):
+from django.contrib.auth.models import User
+
+class Pessoa(models.Model):
     id_pessoa = models.AutoField(primary_key=True)
-    nome = models.CharField(max_length=100, help_text='Nome', blank=False)
-    cpf = models.CharField(max_length=15, help_text='CPF', blank=False)
-    rg = models.CharField(max_length=10, help_text='RG', blank=True)
+    #id_endereco = models.ForeignKey(Endereco)
+    user = models.OneToOneField(User, on_delete=models.PROTECT, unique=True)
+    nome = models.CharField(max_length=100, help_text='Nome', blank=True)
+    cpf = models.CharField(max_length=15, help_text='CPF', blank=True)
+    rg = models.CharField(max_length=10, help_text='RG', blank=False)
     data_nascimento = models.DateField()
+<<<<<<< HEAD
 
 
+=======
+    
+'''
+>>>>>>> 9f734b93f301593f534536520806375469949f51
