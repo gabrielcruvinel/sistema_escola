@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Pessoa
+from .models import Cargo
 
-admin.site.register(Pessoa)
-
+admin.site.register(Cargo)
 # Register your models here.
